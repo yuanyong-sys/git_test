@@ -3,3 +3,4 @@
 香蕉
 苹果
 樱桃
+EOF && git add fruits.txt && git commit -m "来自附件：调整水果顺序" && git push -u origin attach-merge && git checkout main && git merge --no-ff attach-merge -m "合并 attach-merge 到 main" && git push origin main && git log --oneline -5 && echo '---' && cat fruits.txt
